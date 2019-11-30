@@ -8,4 +8,7 @@ public interface CrudService <T, ID>{
     T save(T saveObject);
     void delete(T object);
     void deleteById(ID id);
+
+    interface PetTypeService {
+    }
 }
