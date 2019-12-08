@@ -3,10 +3,10 @@ package sfgpetclinic.bootsrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import sfgpetclinic.model.*;
-import sfgpetclinic.model.services.OwnerService;
-import sfgpetclinic.model.services.PetTypeService;
-import sfgpetclinic.model.services.SpecialitiesService;
-import sfgpetclinic.model.services.VetServise;
+import sfgpetclinic.services.OwnerService;
+import sfgpetclinic.services.PetTypeService;
+import sfgpetclinic.services.SpecialitiesService;
+import sfgpetclinic.services.VetServise;
 
 import java.time.LocalDate;
 

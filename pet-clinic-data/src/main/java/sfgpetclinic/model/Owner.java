@@ -1,12 +1,19 @@
 package sfgpetclinic.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
+@Entity
+@Table(name = "owners")
 public class Owner extends Person {
+    @Column(name = "pets")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "owner")
     private Set<Pet> pets =new HashSet<>();
+    @Column(name = "adress")
     private String adrress;
+    @Column(name = "city")
     private String city;
+    @Column(name = "telephone")
     private String telephone;
 
     public Set<Pet> getPets() {

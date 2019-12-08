@@ -1,8 +1,8 @@
-package sfgpetclinic.model.services.map;
+package sfgpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import sfgpetclinic.model.PetType;
-import sfgpetclinic.model.services.PetTypeService;
+import sfgpetclinic.services.PetTypeService;
 
 import java.util.Set;
 @Service
