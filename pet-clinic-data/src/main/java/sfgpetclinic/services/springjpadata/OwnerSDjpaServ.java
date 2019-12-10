@@ -10,10 +10,10 @@ import java.util.HashSet;
 import java.util.Set;
 @Service
 @Profile("springJPA")
-public class OwnerSDjpa implements OwnerService {
+public class OwnerSDjpaServ implements OwnerService {
     private final OwnerRepository ownerRepository;
 
-    public OwnerSDjpa(OwnerRepository ownerRepository) {
+    public OwnerSDjpaServ(OwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
     }
 
@@ -47,6 +47,6 @@ public class OwnerSDjpa implements OwnerService {
 
     @Override
     public void deleteById(Long aLong) {
-
+        ownerRepository.deleteById(aLong);
     }
 }
