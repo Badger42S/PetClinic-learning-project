@@ -1,11 +1,12 @@
 package sfgpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import sfgpetclinic.model.Visit;
 import sfgpetclinic.services.VisitServise;
 
 import java.util.Set;
-
-public class VisitMap extends AbstractMapService<Visit,Long>{
+@Service
+public class VisitMap extends AbstractMapService<Visit,Long> implements VisitServise{
     private final VisitServise visitServise;
 
     public VisitMap(VisitServise visitServise) {
@@ -13,17 +14,17 @@ public class VisitMap extends AbstractMapService<Visit,Long>{
     }
 
     @Override
-    Set<Visit> findAll() {
+    public Set<Visit> findAll() {
         return super.findAll();
     }
 
     @Override
-    Visit findById(Long aLong) {
+    public Visit findById(Long aLong) {
         return super.findById(aLong);
     }
 
     @Override
-    Visit save(Visit visit) {
+    public Visit save(Visit visit) {
         if(visit.getPet() == null || visit.getPet().getOwner()==null || visit.getPet().getId()==null ||
                 visit.getPet().getOwner().getId()==null){
             throw new RuntimeException("NULLLL");
@@ -33,12 +34,12 @@ public class VisitMap extends AbstractMapService<Visit,Long>{
     }
 
     @Override
-    void deleteById(Long aLong) {
+    public void deleteById(Long aLong) {
         super.deleteById(aLong);
     }
 
     @Override
-    void delete(Visit object) {
+    public void delete(Visit object) {
         super.delete(object);
     }
 }
