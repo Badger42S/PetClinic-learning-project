@@ -1,5 +1,6 @@
 package sfgpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import sfgpetclinic.model.Pet;
@@ -8,6 +9,7 @@ import sfgpetclinic.services.PetService;
 import java.util.Set;
 @Service
 @Scope("prototype")
+@Profile({"default", "map"})
 public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
 
     @Override
