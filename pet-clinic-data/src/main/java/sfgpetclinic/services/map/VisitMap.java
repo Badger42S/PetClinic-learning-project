@@ -7,11 +7,6 @@ import sfgpetclinic.services.VisitServise;
 import java.util.Set;
 @Service
 public class VisitMap extends AbstractMapService<Visit,Long> implements VisitServise{
-    private final VisitServise visitServise;
-
-    public VisitMap(VisitServise visitServise) {
-        this.visitServise = visitServise;
-    }
 
     @Override
     public Set<Visit> findAll() {
