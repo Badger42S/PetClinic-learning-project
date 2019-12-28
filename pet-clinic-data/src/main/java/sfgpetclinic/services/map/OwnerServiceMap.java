@@ -8,6 +8,7 @@ import sfgpetclinic.services.OwnerService;
 import sfgpetclinic.services.PetService;
 import sfgpetclinic.services.PetTypeService;
 
+import java.util.List;
 import java.util.Set;
 @Service
 @Profile({"default", "map"})
@@ -66,6 +67,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner findByLastName(String lastName) {
+        return null;
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
         return null;
     }
 }
