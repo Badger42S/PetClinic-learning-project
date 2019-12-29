@@ -15,6 +15,9 @@ public class Owner extends Person {
     @Column(name = "telephone")
     private String telephone;
 
+    public Owner() {
+    }
+
     public Set<Pet> getPets() {
         return pets;
     }
